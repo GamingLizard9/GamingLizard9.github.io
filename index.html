@@ -13,14 +13,24 @@
 
         //Get a reference to the link on the page
         var a = document.getElementById("overview-link");
+        var b = document.getElementById("projects-link")
 
         //Set code to run when the link is clicked
         // by assigning a function to "onclick"
         a.onclick = function() {
 
           document.getElementById("overview").style.display = "block";
+          document.getElementById("projects").style.display = "none";
+
           document.getElementById("overview-link-bg").className = "is-active";
-          return false;
+          document.getElementById("projects-link-bg").className = "";
+        }
+        b.onclick = function() {
+          document.getElementById("projects").style.display = "block";
+          document.getElementById("overview").style.display = "none";
+
+          document.getElementById("projects-link-bg").className = "is-active";
+          document.getElementById("overview-link-bg").className = "";
         }
       }
     </script>
@@ -32,7 +42,7 @@
         <header class="navbar">
           <div class="container">
             <div class="navbar-brand">
-              <a class="navbar-item">
+              <a class="navbar-item" href="https://gaminglizard9.github.io">
                 <img src="images/navbar-logo.png" alt="Logo">
               </a>
               <span class="navbar-burger" data-target="navbarMenuHeroC">
@@ -69,8 +79,8 @@
         <nav class="tabs is-boxed is-fullwidth">
           <div class="container">
             <ul>
-              <li id="overview-link-bg"><a id="overview-link"">Overview</a></li>
-              <li><a>Projects</a></li>
+              <li id="overview-link-bg"><a id="overview-link" href="#overview">Overview</a></li>
+              <li id="projects-link-bg"><a id="projects-link" href="#projects">Projects</a></li>
               <li><a>Contact</a></li>
             </ul>
           </div>
@@ -84,9 +94,112 @@
       <div class="container is-fluid">
         <div class="notification is-primary is-light">
           <p class="title">Overview</p>
-          <p class="subtitle">Because I want to say what was at the top of the page again</p>
+          <p class="subtitle">Everything that I'm working on</p>
           <p>My name is GamingLizard9, and this is my website!</p>
-          <p>I don't really know what else to put here...</p>
+          <p>I don't really know what else to put here...</p><br>
+          <article class="message is-warning">
+            <div class="message-header">
+              <p>Fast Facts</p>
+            </div>
+            <div class="message-body">
+              <ul>
+                <li>Occupation: Student</li>
+                <li>Location: The Earth</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+      <br>
+    </section>
+
+    <section id="projects" style="display:none;">
+      <br>
+      <div class="container is-fluid">
+        <div class="notification is-primary is-light">
+          <p class="title">Projects</p>
+          <p class="subtitle">Because I want to say what was at the top of the page again</p>
+          <p>Below is a list of all projects that I am currently working on:</p><br>
+          <div class="columns">
+
+            <div class="column">
+              <div class="card">
+                <header class="card-header" style="background-color:#ffe08a;">
+                  <p class="card-header-title">
+                    GamingLizard9.github.io
+                  </p>
+                </header>
+                <div class="card-image">
+                  <figure class="image">
+                    <img src="images/projects/website-homepage.png" alt="Screenshot of this website.">
+                  </figure>
+                </div>
+                <div class="card-content" style="background-color: #fffaeb;">
+                  <div class="content">
+                    <p>This website, which acts as a way to showcase myself and the things I am working on.</p>
+                    <p>Completion: 30%</p>
+                    <br>
+                  </div>
+                </div>
+                <footer class="card-footer" style="background-color: #fffaeb;">
+                  <a href="https://gaminglizard9.github.io" class="card-footer-item">View Project</a>
+                  <a href="https://github.com/gaminglizard9/gaminglizard9.github.io" class="card-footer-item">View Github</a>
+                </footer>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card">
+                <header class="card-header" style="background-color:#ffe08a;">
+                  <p class="card-header-title">
+                    TylerTV
+                  </p>
+                </header>
+                <div class="card-image">
+                  <figure class="image">
+                    <img src="images/projects/tylertv.png" alt="A screenshot of the TylerTV homepage.">
+                  </figure>
+                </div>
+                <div class="card-content" style="background-color: #fffaeb;">
+                  <div class="content">
+                    <p>A streaming service (that will most likely never see the light of day), that I designed the homepage for.</p>
+                    <p>Completion: 2%</p>
+                    <br>
+                  </div>
+                </div>
+                <footer class="card-footer" style="background-color: #fffaeb;">
+                  <a href="https://tylertv.ml" class="card-footer-item">View Project</a>
+                  <a href="https://github.com/tttylerr/tylertv" class="card-footer-item">View Github</a>
+                </footer>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card">
+                <header class="card-header" style="background-color:#ffe08a;">
+                  <p class="card-header-title">
+                    Currently Unnamed PICO-8 Platformer
+                  </p>
+                </header>
+                <div class="card-image">
+                  <figure class="image">
+                    <img src="images/projects/pico-8-platformer.png" alt="A horrendous screenshot of the PICO-8 platformer.">
+                  </figure>
+                </div>
+                <div class="card-content" style="background-color: #fffaeb;">
+                  <div class="content">
+                    <p>A basic platformer with very bad art I am writing in PICO-8.</p>
+                    <p>Completion: 5%</p>
+                    <br>
+                  </div>
+                </div>
+                <footer class="card-footer" style="background-color: #fffaeb;">
+                  <a href="" class="card-footer-item">Project not online yet.</a>
+                  <a href="" class="card-footer-item">GitHub not avalible.</a>
+                </footer>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <br>
