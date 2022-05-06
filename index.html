@@ -3,19 +3,93 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>GamingLizard9</title>
+    <link rel="stylesheet" href="css/mystyles.css">
+
+    <script>
+      // Wait for the page to load first
+      window.onload = function() {
+
+        //Get a reference to the link on the page
+        var a = document.getElementById("overview-link");
+
+        //Set code to run when the link is clicked
+        // by assigning a function to "onclick"
+        a.onclick = function() {
+
+          document.getElementById("overview").style.display = "block";
+          document.getElementById("overview-link-bg").className = "is-active";
+          return false;
+        }
+      }
+    </script>
   </head>
   <body>
-  <section class="section">
-    <div class="box">
-      <h1 class="title">
-        Hello!
-      </h1>
-      <p class="subtitle">
-        My name is GamingLizard9, and welcome to my website!
-      </p>
-      <p>More information will be coming soon!</p>
-    </div>
-  </section>
+ 
+    <section class="hero is-primary is-fullheight">
+      <div class="hero-head">
+        <header class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <a class="navbar-item">
+                <img src="images/navbar-logo.png" alt="Logo">
+              </a>
+              <span class="navbar-burger" data-target="navbarMenuHeroC">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+            <div id="navbarMenuHeroC" class="navbar-menu">
+              <div class="navbar-end">
+                <a class="navbar-item is-active">
+                  Home
+                </a>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+
+      <!-- Hero content: will be in the middle -->
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <p class="title">
+            Hello!
+          </p>
+          <p class="subtitle">
+            My name is GamingLizard9, and welcome to my website!
+          </p>
+        </div>
+      </div>
+
+      <!-- Hero footer: will stick at the bottom -->
+      <div class="hero-foot">
+        <nav class="tabs is-boxed is-fullwidth">
+          <div class="container">
+            <ul>
+              <li id="overview-link-bg"><a id="overview-link"">Overview</a></li>
+              <li><a>Projects</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Overview section: Contains basic info about me -->
+    <section id="overview" style="display:none;">
+      <br>
+      <div class="container is-fluid">
+        <div class="notification is-primary is-light">
+          <p class="title">Overview</p>
+          <p class="subtitle">Because I want to say what was at the top of the page again</p>
+          <p>My name is GamingLizard9, and this is my website!</p>
+          <p>I don't really know what else to put here...</p>
+        </div>
+      </div>
+      <br>
+    </section>
+
   </body>
+</html>
