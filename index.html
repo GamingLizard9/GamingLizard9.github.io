@@ -13,7 +13,8 @@
 
         //Get a reference to the link on the page
         var a = document.getElementById("overview-link");
-        var b = document.getElementById("projects-link")
+        var b = document.getElementById("projects-link");
+        var c = document.getElementById("contact-link");
 
         //Set code to run when the link is clicked
         // by assigning a function to "onclick"
@@ -21,16 +22,29 @@
 
           document.getElementById("overview").style.display = "block";
           document.getElementById("projects").style.display = "none";
+          document.getElementById("contact").style.display = "none";
 
           document.getElementById("overview-link-bg").className = "is-active";
           document.getElementById("projects-link-bg").className = "";
+          document.getElementById("contact-link-bg").className = "";
         }
         b.onclick = function() {
           document.getElementById("projects").style.display = "block";
           document.getElementById("overview").style.display = "none";
+          document.getElementById("contact").style.display = "none";
 
           document.getElementById("projects-link-bg").className = "is-active";
           document.getElementById("overview-link-bg").className = "";
+          document.getElementById("contact-link-bg").className = "";
+        }
+        c.onclick = function() {
+          document.getElementById("contact").style.display = "block";
+          document.getElementById("overview").style.display = "none";
+          document.getElementById("projects").style.display = "none";
+
+          document.getElementById("contact-link-bg").className = "is-active";
+          document.getElementById("overview-link-bg").className = "";
+          document.getElementById("projects-link-bg").className = "";
         }
       }
     </script>
@@ -51,10 +65,13 @@
                 <span></span>
               </span>
             </div>
-            <div id="navbarMenuHeroC" class="navbar-menu" href="index.html">
-              <div class="navbar-end">
-                <a class="navbar-item is-active">
+            <div id="navbarMenuHeroC" class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item is-active"  href="index.html">
                   Home
+                </a>
+                <a class="navbar-item" href="dna/dna.html">
+                  DNA
                 </a>
               </div>
             </div>
@@ -79,9 +96,9 @@
         <nav class="tabs is-boxed is-fullwidth">
           <div class="container">
             <ul>
-              <li id="overview-link-bg"><a id="overview-link" href="#overview">Overview</a></li>
-              <li id="projects-link-bg"><a id="projects-link" href="#projects">Projects</a></li>
-              <li><a>Contact</a></li>
+              <li id="overview-link-bg"><a id="overview-link" href="#overview-link-bg">Overview</a></li>
+              <li id="projects-link-bg"><a id="projects-link" href="#projects-link-bg">Projects</a></li>
+              <li id="contact-link-bg"><a id="contact-link" href="#contact-link-bg">Contact</a></li>
             </ul>
           </div>
         </nav>
@@ -94,7 +111,7 @@
       <div class="container is-fluid">
         <div class="notification is-primary is-light">
           <p class="title">Overview</p>
-          <p class="subtitle">Everything that I'm working on</p>
+          <p class="subtitle">Because I wanted to restate what's at the top of the page</p>
           <p>My name is GamingLizard9, and this is my website!</p>
           <p>I don't really know what else to put here...</p><br>
           <article class="message is-warning">
@@ -118,7 +135,7 @@
       <div class="container is-fluid">
         <div class="notification is-primary is-light">
           <p class="title">Projects</p>
-          <p class="subtitle">Because I want to say what was at the top of the page again</p>
+          <p class="subtitle">All of the stupid stuff I've worked on</p>
           <p>Below is a list of all projects that I am currently working on:</p><br>
           <div class="columns">
 
@@ -152,24 +169,24 @@
               <div class="card">
                 <header class="card-header" style="background-color:#ffe08a;">
                   <p class="card-header-title">
-                    TylerTV
+                    DNA Thingy
                   </p>
                 </header>
                 <div class="card-image">
                   <figure class="image">
-                    <img src="images/projects/tylertv.png" alt="A screenshot of the TylerTV homepage.">
+                    <img src="images/projects/dna.png" alt="A screenshot of the DNA converter">
                   </figure>
                 </div>
                 <div class="card-content" style="background-color: #fffaeb;">
                   <div class="content">
-                    <p>A streaming service (that will most likely never see the light of day), that I designed the homepage for.</p>
-                    <p>Completion: 2%</p>
+                    <p>A conversion tool that converts DNA to RNA and amino acids</p>
+                    <p>Completion: 100%</p>
                     <br>
                   </div>
                 </div>
                 <footer class="card-footer" style="background-color: #fffaeb;">
-                  <a href="https://tylertv.ml" class="card-footer-item">View Project</a>
-                  <a href="https://github.com/tttylerr/tylertv" class="card-footer-item">View Github</a>
+                  <a href="../GamingLizard9.github.io/dna/dna.html" class="card-footer-item">View Project</a>
+                  <a href="https://github.com/gaminglizard9/dna-thingy" class="card-footer-item">View Github</a>
                 </footer>
               </div>
             </div>
@@ -178,25 +195,16 @@
               <div class="card">
                 <header class="card-header" style="background-color:#ffe08a;">
                   <p class="card-header-title">
-                    Currently Unnamed PICO-8 Platformer
+                    Coming Soon!
                   </p>
                 </header>
-                <div class="card-image">
-                  <figure class="image">
-                    <img src="images/projects/pico-8-platformer.png" alt="A horrendous screenshot of the PICO-8 platformer.">
-                  </figure>
-                </div>
                 <div class="card-content" style="background-color: #fffaeb;">
                   <div class="content">
-                    <p>A basic platformer with very bad art I am writing in PICO-8.</p>
-                    <p>Completion: 5%</p>
+                    <p>Right now this is all I am working on but more may come soon!</p>
+                    <p>Completion: NA</p>
                     <br>
                   </div>
                 </div>
-                <footer class="card-footer" style="background-color: #fffaeb;">
-                  <a href="" class="card-footer-item">Project not online yet.</a>
-                  <a href="" class="card-footer-item">GitHub not avalible.</a>
-                </footer>
               </div>
             </div>
           </div>
@@ -205,5 +213,16 @@
       <br>
     </section>
 
+    <section id="contact" style="display:none;">
+      <br>
+      <div class="container is-fluid">
+        <div class="notification is-primary is-light">
+          <p class="title">Contact</p>
+          <p class="subtitle">Just in case you're crazy enough to want to talk to me</p>
+          <p>If you want to reach out to me for some reason, here are some ways you can do it.</p>
+          <p>JK LOL coming soon maybe</p>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

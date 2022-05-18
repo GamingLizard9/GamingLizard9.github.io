@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DNA thingy</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="convert.js"></script>
+        <link rel="stylesheet" href="..\css\mystyles.css">
+    </head>
+    <body>
+
+        <section class="hero is-primary is-medium">
+            <div class="hero-head">
+              <header class="navbar">
+                <div class="container">
+                  <div class="navbar-brand">
+                    <a class="navbar-item" href="https://gaminglizard9.github.io">
+                      <img src="../images/navbar-logo.png" alt="Logo">
+                    </a>
+                    <span class="navbar-burger" data-target="navbarMenuHeroC">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </span>
+                  </div>
+                  <div id="navbarMenuHeroC" class="navbar-menu">
+                    <div class="navbar-start">
+                      <a class="navbar-item"  href="../index.html">
+                        Home
+                      </a>
+                      <a class="navbar-item is-active" href="dna/dna.html">
+                        DNA
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </header>
+            </div>
+      
+            <!-- Hero content: will be in the middle -->
+            <div class="hero-body">
+              <div class="container has-text-centered">
+                <p class="title">
+                  DNA Thingy
+                </p>
+                <p class="subtitle">
+                  Converts DNA into mRNA, and amino acids
+                </p>
+              </div>
+            </div>
+          </section>
+        <br>
+        <div class="container is-fluid">
+            <div class="notification is-primary is-light">
+                <p>DNA:</p>
+                <textarea class="textarea is-warning is-normal" placeholder="put your DNA here (e.g. TACGCGGTGAAATATGTCATT)"id="dna" rows="3"></textarea><br>
+                <button id="rna-button" class="button is-warning" onclick="convert(document.getElementById('dna').value);">Convert</button>
+                <br><br>
+                <div class="columns">
+                    <div class="column">
+                        <article class="message is-warning">
+                            <div class="message-header">
+                                <p>RNA</p>
+                            </div>
+                            <div class="message-body">
+                                <p id="rna-out" style="word-wrap: break-word;">
+                                    This is where the RNA is outputted (in the format of "auggcgatt")
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="column">
+                        <article class="message is-warning">
+                            <div class="message-header">
+                                <p>Amino Acids</p>
+                            </div>
+                            <div class="message-body">
+                                <p id="amino-out" style="word-wrap: break-word;">
+                                    This is where the amino acids are outputted (in the format of "Met|Arg|Stop")
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
