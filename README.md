@@ -1,5 +1,5 @@
 This is my website
 
-It has info about me and that's it right now
+It has info about me and stuff I'm working on and how to reach me
 
-currently there are 2 tabs that work don't try the 3rd one
+It's not quite finished yet but it's getting pretty close
