@@ -8,7 +8,18 @@
     <link rel="stylesheet" href="css/mystyles.css">
 
     <script>
-      // Wait for the page to load first
+      document.addEventListener('DOMContentLoaded', () => {
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        $navbarBurgers.forEach( el => {
+          el.addEventListener('click', () => {
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+          });
+        });
+        });
+
       window.onload = function() {
 
         //Get a reference to the link on the page
@@ -59,19 +70,19 @@
               <a class="navbar-item" href="https://gaminglizard9.github.io">
                 <img src="images/navbar-logo.png" alt="Logo">
               </a>
-              <span class="navbar-burger" data-target="navbarMenuHeroC">
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
+              <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
             </div>
             <div id="navbarMenuHeroC" class="navbar-menu">
               <div class="navbar-start">
                 <a class="navbar-item is-active"  href="index.html">
                   Home
                 </a>
-                <a class="navbar-item" href="dna/dna.html">
-                  DNA
+                <a class="navbar-item" href="clone-hero/index.html">
+                  Clone Hero Charts
                 </a>
               </div>
             </div>
@@ -112,22 +123,44 @@
         <div class="notification is-primary is-light">
           <p class="title">Overview</p>
           <p class="subtitle">Because I wanted to restate what's at the top of the page</p>
-          <p>My name is GamingLizard9, and this is my website!</p>
-          <p>I don't really know what else to put here...</p><br>
-          <article class="message is-warning">
-            <div class="message-header">
-              <p>Fast Facts</p>
+          <p>My name is GamingLizard9, and this is my website!</p> <br>
+          <div class="columns">
+            <div class="column">
+              <article class="message is-warning">
+                <div class="message-header">
+                  <p>Fast Facts</p>
+                </div>
+                <div class="message-body">
+                  <ul>
+                    <li>Occupation: Student</li>
+                    <li>Location: Michigan</li>
+                  </ul>
+                </div>
+              </article>
             </div>
-            <div class="message-body">
-              <ul>
-                <li>Occupation: Student</li>
-                <li>Location: Michigan</li>
-              </ul>
+            <div class="column">
+              <article class="message is-warning">
+                <div class="message-header">
+                  <p>Games I play</p>
+                </div>
+                <div class="message-body">
+                  <ul>
+                    <li><a href="https://namemc.com/profile/GamingLizard9.1">Minecraft</a></li>
+                    <li><a href="https://scorespy.online/users/GamingLizard999">Clone Hero</a></li>
+                    <li><a href="https://osu.ppy.sh/users/28629078">osu!</a></li>
+                    <li>Beat Saber</li>
+                    <li>A Dance of Fire and Ice</li>
+                  </ul>
+                </div>
+              </article>
             </div>
-          </article>
+          </div>
         </div>
       </div>
       <br>
+      <footer class="footer is-primary">
+        <p>hi</p>
+      </footer>
     </section>
 
     <section id="projects" style="display:none;">
@@ -256,7 +289,7 @@
                   </ul>
                 </div>
               </article>
-              </div>
+            </div>
             </div>
           </div>
         </div>
