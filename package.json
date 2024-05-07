@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "css-build": "node-sass --omit-source-map-url sass/mystyles.sass css/mystyles.css",
+    "dakboard-build": "node-sass --omit-source-map-url sass/dakboard.sass css/dakboard.css",
     "css-watch": "npm run css-build -- --watch",
     "start": "npm run css-watch",
     "secret-build": "node-sass --omit-source-map-url sass/secret.sass css/secret.css"
