@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GamingLizard9</title>
+    <link rel="stylesheet" href="css/mystyles.css">
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const $navbarBurgers = Array.prototype.slice.Call(document.querySelectorAll('.navbar-burger'), 0);
+        $navbarBurgers.forEach( el => {
+          el.addEventListener('click', () => {
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+            //hi
+          });
+        });
+        });
+
+      window.onload = function() {
+
+        //Get a reference to the link on the page
+        var a = document.getElementById("overview-link");
+        var b = document.getElementById("projects-link");
+        var c = document.getElementById("contact-link");
+
+        //Set code to run when the link is clicked
+        // by assigning a function to "onclick"
+        a.onclick = function() {
+
+          document.getElementById("overview").style.display = "block";
+          document.getElementById("projects").style.display = "none";
+          document.getElementById("contact").style.display = "none";
+
+          document.getElementById("overview-link-bg").className = "is-active";
+          document.getElementById("projects-link-bg").className = "";
+          document.getElementById("contact-link-bg").className = "";
+        }
+        b.onclick = function() {
+          document.getElementById("projects").style.display = "block";
+          document.getElementById("overview").style.display = "none";
+          document.getElementById("contact").style.display = "none";
+
+          document.getElementById("projects-link-bg").className = "is-active";
+          document.getElementById("overview-link-bg").className = "";
+          document.getElementById("contact-link-bg").className = "";
+        }
+        c.onclick = function() {
+          document.getElementById("contact").style.display = "block";
+          document.getElementById("overview").style.display = "none";
+          document.getElementById("projects").style.display = "none";
+
+          document.getElementById("contact-link-bg").className = "is-active";
+          document.getElementById("overview-link-bg").className = "";
+          document.getElementById("projects-link-bg").className = "";
+        }
+      }
+    </script>
+  </head>
+  <body>
+ 
+    <section class="hero is-primary is-fullheight">
+      <div class="hero-head">
+        <header class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="https://gaminglizard9.github.io">
+                <img src="images/navbar-logo.png" alt="Logo">
+              </a>
+              <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+            <div id="navMenu" class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item is-active"  href="index.html">
+                  Home
+                </a>
+                <a class="navbar-item" href="clone-hero/index.html">
+                  Clone Hero Charts
+                </a>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+
+      <!-- Hero content: will be in the middle -->
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <p class="title">
+            Hello!
+          </p>
+          <p class="subtitle">
+            My name is GamingLizard9, and welcome to my website!
+          </p>
+        </div>
+      </div>
+
+      <!-- Hero footer: will stick at the bottom -->
+      <div class="hero-foot">
+        <nav class="tabs is-boxed is-fullwidth">
+          <div class="container">
+            <ul>
+              <li id="overview-link-bg"><a id="overview-link" href="#overview-link-bg">Overview</a></li>
+              <li id="projects-link-bg"><a id="projects-link" href="#projects-link-bg">Projects</a></li>
+              <li id="contact-link-bg"><a id="contact-link" href="#contact-link-bg">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Overview section: Contains basic info about me -->
+    <section id="overview" style="display:none;">
+      <br>
+      <div class="container is-fluid">
+        <div class="notification is-primary is-light">
+          <p class="title">Overview</p>
+          <p class="subtitle">Because I wanted to restate what's at the top of the page</p>
+          <p>My name is GamingLizard9, and this is my website!</p> <br>
+          <div class="columns">
+            <div class="column">
+              <article class="message is-warning">
+                <div class="message-header">
+                  <p>Fast Facts</p>
+                </div>
+                <div class="message-body">
+                  <ul>
+                    <li>Occupation: Student</li>
+                    <li>Location: Michigan</li>
+                    <li>Pronouns: he/him</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+            <div class="column">
+              <article class="message is-warning">
+                <div class="message-header">
+                  <p>Games I play</p>
+                </div>
+                <div class="message-body">
+                  <ul>
+                    <li><a href="https://namemc.com/profile/GamingLizard9.1">Minecraft</a></li>
+                    <li><a href="https://scorespy.online/users/GamingLizard999">Clone Hero</a></li>
+                    <li><a href="https://osu.ppy.sh/users/28629078">osu!</a></li>
+                    <li><a href="https://www.beatleader.xyz/u/601">Beat Saber</a></li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+    </section>
+
+    <section id="projects" style="display:none;">
+      <br>
+      <div class="container is-fluid">
+        <div class="notification is-primary is-light">
+          <p class="title">Projects</p>
+          <p class="subtitle">All of the stupid stuff I've worked on</p>
+          <p>Below is a list of all projects that I am currently working on:</p><br>
+          <div class="columns">
+
+            <div class="column">
+              <div class="card">
+                <header class="card-header" style="background-color:#ffe08a;">
+                  <p class="card-header-title">
+                    GamingLizard9.github.io
+                  </p>
+                </header>
+                <div class="card-image">
+                  <figure class="image">
+                    <img src="images/projects/website-homepage.png" alt="Screenshot of this website.">
+                  </figure>
+                </div>
+                <div class="card-content" style="background-color: #fffaeb;">
+                  <div class="content">
+                    <p>This website, which acts as a way to showcase myself and the things I am working on.</p>
+                    <p>Completion: 80%</p>
+                    <br>
+                  </div>
+                </div>
+                <footer class="card-footer" style="background-color: #fffaeb;">
+                  <a href="https://gaminglizard9.github.io" class="card-footer-item">View Project</a>
+                  <a href="https://github.com/gaminglizard9/gaminglizard9.github.io" class="card-footer-item">View Github</a>
+                </footer>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card">
+                <header class="card-header" style="background-color:#ffe08a;">
+                  <p class="card-header-title">
+                    DNA Thingy
+                  </p>
+                </header>
+                <div class="card-image">
+                  <figure class="image">
+                    <img src="images/projects/dna.png" alt="A screenshot of the DNA converter">
+                  </figure>
+                </div>
+                <div class="card-content" style="background-color: #fffaeb;">
+                  <div class="content">
+                    <p>A conversion tool that converts DNA to RNA and amino acids</p>
+                    <p>Completion: 100%</p>
+                    <br>
+                  </div>
+                </div>
+                <footer class="card-footer" style="background-color: #fffaeb;">
+                  <a href="dna/dna.html" class="card-footer-item">View Project</a>
+                  <a href="https://github.com/gaminglizard9/dna-thingy" class="card-footer-item">View Github</a>
+                </footer>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card">
+                <header class="card-header" style="background-color:#ffe08a;">
+                  <p class="card-header-title">
+                    Small Steps Big Dreams Website
+                  </p>
+                </header>
+                <div class="card-image">
+                  <figure class="image">
+                    <img src="images/projects/dream.png" alt="A screenshot of a page on the school's website.">
+                  </figure>
+                </div>
+                <div class="card-content" style="background-color: #fffaeb;">
+                  <div class="content">
+                    <p>I created the website for a preschool</p>
+                    <p>Completion: 95%</p>
+                    <br>
+                  </div>
+                </div>
+                <footer class="card-footer" style="background-color: #fffaeb;">
+                  <a href="https://gaminglizard9.github.io/smallsteps-bigdreams/" class="card-footer-item">View Project</a>
+                  <a href="https://github.com/GamingLizard9/smallsteps-bigdreams" class="card-footer-item">View Github</a>
+                </footer>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+    </section>
+
+    <section id="contact" style="display:none;">
+      <br>
+      <div class="container is-fluid">
+        <div class="notification is-primary is-light">
+          <p class="title">Contact</p>
+          <p class="subtitle">Just in case you're crazy enough to want to talk to me</p>
+          <div class="columns">
+            <div class="column">
+              <article class="message is-warning">
+                <div class="message-header">
+                  <p>Social Links</p>
+                </div>
+                <div class="message-body">
+                  <a class="button" href="https://www.youtube.com/channel/UCDV9lckPTnzNweoEq2s1_yw" style="background-color:#ff0000; color: #ffffff;">YouTube</a>
+                  <a class="button" href="https://open.spotify.com/user/jolz5klwrbmnd8i5bf7x1u12k" style="background-color:#1fdf64; color:#000000;">Spotify</a>
+                  <a class="button" href="https://steamcommunity.com/profiles/GamingLizard9" style="background-color:#171a21; color:#c5c3c0;">Steam</a>
+                  <a class="button" href="https://www.twitch.tv/gaminglizard9" style="background-color:#a970ff; color:#ffffff;">Twitch</a>
+                  <a class="button" href="https://github.com/GamingLizard9" style="background-color:#161b22; color:#babbbd;">GitHub</a>
+                  <a class="button" href="https://reddit.com/u/gaminglizard99" style="background-color:#ff4500; color: #ffffff;">Reddit</a>
+                  <br><div class="content">
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="column">
+              <article class="message is-warning">
+                <div class="message-header">
+                  <p>Methods of Contact</p>
+                </div>
+                <div class="message-body">
+                  <ul>
+                    <li>Discord: GamingLizard9#1124</li>
+                    <li>Email: dawsoncall888@gmail.com</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer is-primary">
+      <p>Website created by Dawson Call.</p>
+    </footer>
+
+  </body>
+</html>
