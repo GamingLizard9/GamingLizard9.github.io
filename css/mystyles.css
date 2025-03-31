@@ -21555,4 +21555,13 @@ has-background-danger.is-hoverable:active {
   pointer-events: all !important;
 }
 
+.circle {
+  border-radius: 9999px;
+}
+
+.hero-body, .hero {
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
 /*# sourceMappingURL=mystyles.css.map */

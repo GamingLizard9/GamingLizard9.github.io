@@ -5,3 +5,12 @@ $pink-red: #ff2bb8;
 );
 
 @charset "utf-8";
+
+.circle {
+  border-radius: 9999px;
+}
+
+.hero-body, .hero {
+  padding-left: 64px;
+  padding-right: 64px;
+}
