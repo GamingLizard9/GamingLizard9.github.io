@@ -4,7 +4,8 @@
   "description": "my website yay",
   "main": "index.js",
   "scripts": {
-    "css-build": "sass --watch sass/mystyles.scss css/mystyles.css"
+    "build-bulma": "sass --load-path=node_modules sass/mystyles.scss css/mystyles.css",
+    "start": "npm run build-bulma -- --watch"
   },
   "repository": {
     "type": "git",
