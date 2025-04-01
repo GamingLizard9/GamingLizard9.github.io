@@ -4,13 +4,15 @@ $pink-red: #ff2bb8;
   $primary: $pink-red
 );
 
-@charset "utf-8";
-
 .circle {
   border-radius: 9999px;
 }
 
 .hero-body, .hero {
-  padding-left: 64px;
-  padding-right: 64px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+#nav-tabs {
+  border-radius: 0px 0px 30px 30px;
 }
