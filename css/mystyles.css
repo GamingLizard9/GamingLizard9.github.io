@@ -21572,4 +21572,8 @@ has-background-danger.is-hoverable:active {
   border-radius: 0px 0px 30px 30px;
 }
 
+.crossword-tags {
+  padding-top: 10px;
+}
+
 /*# sourceMappingURL=mystyles.css.map */
