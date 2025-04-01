@@ -21559,6 +21559,10 @@ has-background-danger.is-hoverable:active {
   border-radius: 9999px;
 }
 
+.website-image {
+  border-radius: 0.375rem;
+}
+
 .hero-body, .hero {
   padding-left: 32px;
   padding-right: 32px;
