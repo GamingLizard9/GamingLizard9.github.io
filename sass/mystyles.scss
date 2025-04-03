@@ -1,8 +1,33 @@
 $pink-red: #ff2bb8;
 
-@use "../node_modules/bulma/sass/" as * with (
+/* Import the basic bulma with customized color */
+@use "bulma/sass/utilities" with (
   $primary: $pink-red
 );
+
+/* Then import only the needed modules */
+@use "bulma/sass/base";
+
+@use "bulma/sass/grid/columns";
+@use "bulma/sass/grid/grid";
+
+@use "bulma/sass/helpers/color";
+@use "bulma/sass/helpers/typography";
+
+@use "bulma/sass/layout/container";
+@use "bulma/sass/layout/footer";
+@use "bulma/sass/layout/hero";
+@use "bulma/sass/layout/level";
+
+@use "bulma/sass/elements/button";
+@use "bulma/sass/elements/content";
+@use "bulma/sass/elements/notification";
+@use "bulma/sass/elements/tag";
+@use "bulma/sass/elements/title";
+
+@use "bulma/sass/themes";
+
+/* Everything below this point is my CSS */
 
 .circle {
   border-radius: 9999px;
