@@ -21576,4 +21576,25 @@ has-background-danger.is-hoverable:active {
   padding-top: 10px;
 }
 
+/* Social media buttons */
+#github-button {
+  background-color: #161414;
+}
+
+#instagram-button {
+  background-color: #d53168;
+}
+
+#youtube-button {
+  background-color: #f70000;
+}
+
+#stats-fm-button {
+  background-color: #00d258;
+}
+
+#steam-button {
+  background-color: #11396c;
+}
+
 /*# sourceMappingURL=mystyles.css.map */
