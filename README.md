@@ -1,9 +1,9 @@
-This is my website!
+This is my personal website!
 
-It contains personal information about me and the things I have done.
+It contains various pieces of information about me, some things I've done, and how you
+can contact me.
 
-I have created it using the [Bulma](https://bulma.io) CSS framework and zero JavaScript.
+I gave the site a complete redesign in April of 2025; if you still want to see the old
+versions, they are on the [Internet Archive](https://web.archive.org/web/20241201000000*/gaminglizard9.github.io) at [one of these two links](https://web.archive.org/web/20250000000000*/dawsoncall.com).
 
-You can access the site [here](https://dawsoncall.com).
-
-Feel free to use this code in your own projects if it helps you; no credit is needed.
+I made this page using the [Bulma](https://bulma.io) CSS framework.
