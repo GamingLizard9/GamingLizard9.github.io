@@ -1,0 +1,24 @@
+---
+const { pageTitle } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{pageTitle}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+		<slot />
+		<footer id="footer" class="footer has-background-primary-soft">
+            <div class="content has-text-centered">
+                <p class="has-text-text-bold">
+                    Website created by <a href="https://dawsoncall.com">Dawson Call</a>.
+                    The source code is available on <a href="https://github.com/GamingLizard9/GamingLizard9.github.io">GitHub</a>.
+                </p>
+                <p class="has-text-text-bold">This webpage was last updated August 29th, 2025.</p>
+            </div>
+          </footer>
+    </body>
+</html>

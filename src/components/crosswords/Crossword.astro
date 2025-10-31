@@ -1,0 +1,27 @@
+---
+//import '../styles/global.css';
+
+//import CrosswordTag from './CrosswordTag.astro';
+
+const {title, date } = Astro.props;
+---
+
+<div class="cell">
+    <a href="https://crosshare.org/crosswords/7I3IKn6aQDUMbBKzVPFb/an-out-of-this-world-sight">
+        <div class="notification has-background-primary-soft">
+            <span class="subtitle has-text-weight-semibold">{title}</span>
+            <p class="is-size-7">Published {date}</p></span>
+            <div class="crossword-tags">
+                <span class="tag is-warning is-hoverable">Midi</span>   
+                <span class="tag is-white is-hoverable">5x25</span>   
+                <span class="tag is-hoverable is-black">Themeless</span>    
+            </div>
+        </div>
+    </a>
+</div>
+
+<style>
+    .crossword-tags {
+        padding-top: 10px;
+    }
+</style>

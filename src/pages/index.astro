@@ -2,289 +2,238 @@
 import "../styles/global.css";
 
 import { Image } from 'astro:assets';
-import pictureOfMe from '../assets/picture-of-me.webp';
+
 import smallStepsBigDreams from '../assets/websites/smallsteps-bigdreams.webp';
 import sfsBand from '../assets/websites/sfsband.webp';
 import dakboards from '../assets/websites/dakboards.webp';
+
+import MainLayout from '../layouts/MainLayout.astro';
+
+import HeaderHero from '../components/HeaderHero.astro';
+import NavBar from '../components/NavBar.astro';
+import Crossword from "../components/crosswords/Crossword.astro";
+
+const pageTitle = "Dawson Call's Website!";
 ---
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Dawson Call's Website!</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        <div class="hero is-small  has-background-primary-soft">
-            <div class="hero-header">
+<MainLayout pageTitle={pageTitle}>
+	<HeaderHero />
 
-            </div>
-            <div class="hero-body">
-                <div class="columns">
-                    <div class="column">
-                        <div class="content has-text-text-bold">
-                            <span class="title is-size-1">Hi! I'm <span class="has-text-primary-bold">Dawson Call</span>
-                            
-                            <p class="is-size-6">he/him</p></span>
-                            <p></p> <!-- Line break that is smaller than a <br> -->
-                            <p class="is-size-5">I am currently a freshman at Michigan State University, studying computer science</p>
-                            <p class="is-size-5">In my free time, I enjoy programming, playing video games, and playing music.</p>
-                        </div>
-                    </div>
-                    <div class="column is-one-quarter">
-                        <Image class="circle" src={pictureOfMe} alt="A picture of me."/>
-                    </div>
-                </div>
-            </div>
-        </div>
+	<NavBar /><br>
 
-        <!-- This will allow people to jump to a specific section -->
-        <div class="contianer is-fluid">
-            <div class="notification has-background-primary-soft" id="nav-tabs">
-                <nav class="level">
-                    <a class="level-item title is-size-4" href="#websites">Websites</a>
-                    <a class="level-item title is-size-4" href="#crosswords">Crosswords</a>
-                    <a class="level-item is-size-4 title" href="#socials">Contact</a><img>
-                </nav>
-            </div>
-        </div><br>
+	<div class="container is-fluid">
 
-        <div class="container is-fluid">
+		<!-- This section contains the various websites I've designed -->
+		<section id="websites">
+			<h1 class="title is-size-2">Websites</h1>
+			<p>
+				I have created and designed websites for people. 
+				Some of my works are listed below.
+				If you would like to me create a website for you or your business,
+				feel free to <a href="#socials">contact me</a>!
+			</p>
+			<br>
+			<div class="grid is-col-min-12">
+				<div class="cell">
+					<a href="https://web.archive.org/web/20240528004311/https://gaminglizard9.github.io/dakboards/">
+						<div class="notification has-background-primary-soft">
+							<p class="subtitle has-text-weight-semibold"><strong>Dawson's Dakboards</strong></p>
+							<Image class="website-image" src={dakboards} alt="The home page of the Dawson's Dakboards website."/>
+							<p>
+								I made this website for a personal project that never ended up panning out,
+								but it is my personal favorite website I have made.
+								Note that it is hosted on the Internet Archive,
+								so it loads slowly and is missing a few resources.
+							</p>
+						</div>
+					</a>
+				</div>
+				<div class="cell">
+					<a href="https://sfsband.org">
+						<div class="notification has-background-primary-soft">
+							<p class="subtitle has-text-weight-semibold"><strong>St. Francis Band</strong></p>
+							<Image class="website-image" src={sfsBand} alt="The homepage of the SFS band website."/>
+							<p>
+								This website provides information about my high school's band program, 
+								and gives potential members an embedded interest form they can fill out.
+							</p>
+						</div>
+					</a>
+				</div>                    
+				<div class="cell">
+					<a href="https://smallsteps-bigdreams.com">
+						<div class="notification has-background-primary-soft">
+							<p class="subtitle has-text-weight-semibold"><strong>Small Steps Big Dreams Preschool</strong></p>
+							<Image class="website-image" src={smallStepsBigDreams} alt="The homepage of the Small Steps Big Dreams Preschool website."/>
+							<p>
+								I created this website in 2023 for my aunt's preschool.</p>
+								<p>Note that the website uses a self-signed certificate, 
+								so you might have to click past a warning to view it.
+							</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section><hr>
 
-            <!-- This section contains the various websites I've designed -->
-            <section id="websites">
-                <h1 class="title is-size-2">Websites</h1>
-                <p>
-                    I have created and designed websites for people. 
-                    Some of my works are listed below.
-                    If you would like to me create a website for you or your business,
-                    feel free to <a href="#socials">contact me</a>!
-                </p>
-                <br>
-                <div class="grid is-col-min-12">
-                    <div class="cell">
-                        <a href="https://web.archive.org/web/20240528004311/https://gaminglizard9.github.io/dakboards/">
-                            <div class="notification has-background-primary-soft">
-                                <p class="subtitle has-text-weight-semibold"><strong>Dawson's Dakboards</strong></p>
-                                <Image class="website-image" src={dakboards} alt="The home page of the Dawson's Dakboards website."/>
-                                <p>
-                                    I made this website for a personal project that never ended up panning out,
-                                    but it is my personal favorite website I have made.
-                                    Note that it is hosted on the Internet Archive,
-                                    so it loads slowly and is missing a few resources.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cell">
-                        <a href="https://sfsband.org">
-                            <div class="notification has-background-primary-soft">
-                                <p class="subtitle has-text-weight-semibold"><strong>St. Francis Band</strong></p>
-                                <Image class="website-image" src={sfsBand} alt="The homepage of the SFS band website."/>
-                                <p>
-                                    This website provides information about my high school's band program, 
-                                    and gives potential members an embedded interest form they can fill out.
-                                </p>
-                            </div>
-                        </a>
-                    </div>                    
-                    <div class="cell">
-                        <a href="https://smallsteps-bigdreams.com">
-                            <div class="notification has-background-primary-soft">
-                                <p class="subtitle has-text-weight-semibold"><strong>Small Steps Big Dreams Preschool</strong></p>
-                                <Image class="website-image" src={smallStepsBigDreams} alt="The homepage of the Small Steps Big Dreams Preschool website."/>
-                                <p>
-                                    I created this website in 2023 for my aunt's preschool.</p>
-                                    <p>Note that the website uses a self-signed certificate, 
-                                    so you might have to click past a warning to view it.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </section><hr>
+		<section id="crosswords">
+			<h1 class="title is-size-2">Crosswords</h1>
+			<p>
+				A while back, I got into making some crosswords using a program called <a href="https://crosshare.org">Crosshare</a>
+				However, I don't really do it anymore, and I never was very good at it.
+				I have decided to leave these here for archival reasons, in case anyone is still interested.
+				My favorite one that I made was probably "<em><a href="#fave">Say the Magic Word!</a></em>"
+			</p><br>
+			<div class="grid is-col-min-9">
+				<Crossword title="An Out Of This World Sight" date="May 3, 2025" />
+				<div class="cell">
+					<a href="https://crosshare.org/crosswords/WDLa2F1rQFgqC3aP1OY7/its-hue-tiful">
+						<div class="notification has-background-primary-soft">
+							<span class="subtitle has-text-weight-semibold">It's Hue-tiful!
+							<p class="is-size-7">Published April 30, 2025</p></span>
+							<div class="crossword-tags">
+								<span class="tag is-warning is-hoverable">Midi</span>   
+								<span class="tag is-white is-hoverable">10x12</span>   
+								<span class="tag is-hoverable is-link">Themed</span>    
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="cell">
+					<a href="https://crosshare.org/crosswords/v3fn6mkaMJFhhbll2NmG/how-ironic">
+						<div class="notification has-background-primary-soft">
+							<span class="subtitle has-text-weight-semibold">How Ironic
+							<p class="is-size-7">Published April 2, 2025</p></span>
+							<div class="crossword-tags">
+								<span class="tag is-danger is-hoverable">Mini</span>   
+								<span class="tag is-white is-hoverable">5x5</span>   
+								<span class="tag is-hoverable is-black">Themeless</span>    
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="cell">
+					<a href="https://crosshare.org/crosswords/qiIJ0PFCO8xxp1MhZHui/theres-so-mushroom-in-here">
+						<div class="notification has-background-primary-soft">
+							<span class="subtitle has-text-weight-semibold">There's So Mushroom In Here!
+							<p class="is-size-7">Published March 28, 2025</p></span>
+							<div class="crossword-tags">
+								<span class="tag is-success is-hoverable">Full</span>   
+								<span class="tag is-white is-hoverable">15x15</span>   
+								<span class="tag is-hoverable is-link">Themed</span>    
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="cell">
+					<a href="https://crosshare.org/crosswords/Zg0croaxwIkIrzvXBMLl/not-a-crocodile-or-a-rhinoceros">
+						<div class="notification has-background-primary-soft">
+							<span class="subtitle has-text-weight-semibold">Not A Crocodile or a Rhinoceros
+								<p class="is-size-7">Published February 28, 2025</p></span>
+							<div class="crossword-tags">
+								<span class="tag is-warning is-hoverable">Midi</span>   
+								<span class="tag is-white is-hoverable">12x9</span>   
+								<span class="tag is-hoverable is-link">Themed</span>   
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="cell" id="fave">
+					<a href="https://crosshare.org/crosswords/Pbni3aVUSIr964GDNO99/say-the-magic-word">
+						<div class="notification has-background-primary-soft">
+							<span class="subtitle has-text-weight-semibold">Say the Magic Word!
+								<p class="is-size-7">Published February 12, 2025</p></span>
+							<div class="crossword-tags">
+								<span class="tag is-success is-hoverable">Full</span>   
+								<span class="tag is-white is-hoverable">11x15</span>   
+								<span class="tag is-hoverable is-link">Themed</span>   
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="cell">
+					<a href="https://crosshare.org/crosswords/IiiLdUVDvAGu2ixejEKj/the-hole-story">
+						<div class="notification has-background-primary-soft">
+							<span class="subtitle has-text-weight-semibold">The Whole Story
+								<p class="is-size-7">Published February 7, 2025</p></span>
+							<div class="crossword-tags">
+								<span class="tag is-warning is-hoverable">Midi</span>   
+								<span class="tag is-white is-hoverable">11x11</span>   
+								<span class="tag is-hoverable is-link">Themed</span>   
+								<span class="tag is-hoverable is-info">Grid Art</span>  
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="cell">
+					<a href="https://crosshare.org/crosswords/W4eJoZfH0pq6908LfnLz/whipped-into-shape">
+						<div class="notification has-background-primary-soft">
+							<span class="subtitle has-text-weight-semibold">Whipped Into Shape
+								<p class="is-size-7">Published February 4, 2025</p></span>
+							<div class="crossword-tags">
+								<span class="tag is-warning is-hoverable">Midi</span>   
+								<span class="tag is-white is-hoverable">9x9</span>   
+								<span class="tag is-hoverable is-link">Themed</span>   
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="cell">
+					<a href="https://crosshare.org/crosswords/DlBTlKs915JmO3frg1dS/high-excitement">
+						<div class="notification has-background-primary-soft">
+							<span class="subtitle has-text-weight-semibold">High Excitement
+								<p class="is-size-7">Published January 25, 2025</p></span>
+							<div class="crossword-tags">
+								<span class="tag is-warning is-hoverable">Midi</span>   
+								<span class="tag is-white is-hoverable">11x11</span>   
+								<span class="tag is-hoverable is-black">Themeless</span>   
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="cell">
+					<a href="https://crosshare.org/crosswords/yspZYGGyr5GfhDnJc7v0/opposite-day">
+						<div class="notification has-background-primary-soft">
+							<span class="subtitle has-text-weight-semibold">Opposite Day
+								<p class="is-size-7">Published January 17, 2025</p></span>
+							<div class="crossword-tags">
+								<span class="tag is-danger is-hoverable">Mini</span>   
+								<span class="tag is-white is-hoverable">5x5</span>   
+								<span class="tag is-hoverable is-link">Themed</span>   
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section><hr>
 
-            <section id="crosswords">
-                <h1 class="title is-size-2">Crosswords</h1>
-                <p>
-                    A while back, I got into making some crosswords using a program called <a href="https://crosshare.org">Crosshare</a>
-                    However, I don't really do it anymore, and I never was very good at it.
-                    I have decided to leave these here for archival reasons, in case anyone is still interested.
-                    My favorite one that I made was probably "<em><a href="#fave">Say the Magic Word!</a></em>"
-                </p><br>
-                <div class="grid is-col-min-9">
-                    <div class="cell">
-                        <a href="https://crosshare.org/crosswords/7I3IKn6aQDUMbBKzVPFb/an-out-of-this-world-sight">
-                            <div class="notification has-background-primary-soft">
-                                <span class="subtitle has-text-weight-semibold">An Out Of This World Sight
-                                <p class="is-size-7">Published May 3, 2025</p></span>
-                                <div class="crossword-tags">
-                                    <span class="tag is-warning is-hoverable">Midi</span>   
-                                    <span class="tag is-white is-hoverable">5x25</span>   
-                                    <span class="tag is-hoverable is-black">Themeless</span>    
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cell">
-                        <a href="https://crosshare.org/crosswords/WDLa2F1rQFgqC3aP1OY7/its-hue-tiful">
-                            <div class="notification has-background-primary-soft">
-                                <span class="subtitle has-text-weight-semibold">It's Hue-tiful!
-                                <p class="is-size-7">Published April 30, 2025</p></span>
-                                <div class="crossword-tags">
-                                    <span class="tag is-warning is-hoverable">Midi</span>   
-                                    <span class="tag is-white is-hoverable">10x12</span>   
-                                    <span class="tag is-hoverable is-link">Themed</span>    
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cell">
-                        <a href="https://crosshare.org/crosswords/v3fn6mkaMJFhhbll2NmG/how-ironic">
-                            <div class="notification has-background-primary-soft">
-                                <span class="subtitle has-text-weight-semibold">How Ironic
-                                <p class="is-size-7">Published April 2, 2025</p></span>
-                                <div class="crossword-tags">
-                                    <span class="tag is-danger is-hoverable">Mini</span>   
-                                    <span class="tag is-white is-hoverable">5x5</span>   
-                                    <span class="tag is-hoverable is-black">Themeless</span>    
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cell">
-                        <a href="https://crosshare.org/crosswords/qiIJ0PFCO8xxp1MhZHui/theres-so-mushroom-in-here">
-                            <div class="notification has-background-primary-soft">
-                                <span class="subtitle has-text-weight-semibold">There's So Mushroom In Here!
-                                <p class="is-size-7">Published March 28, 2025</p></span>
-                                <div class="crossword-tags">
-                                    <span class="tag is-success is-hoverable">Full</span>   
-                                    <span class="tag is-white is-hoverable">15x15</span>   
-                                    <span class="tag is-hoverable is-link">Themed</span>    
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cell">
-                        <a href="https://crosshare.org/crosswords/Zg0croaxwIkIrzvXBMLl/not-a-crocodile-or-a-rhinoceros">
-                            <div class="notification has-background-primary-soft">
-                                <span class="subtitle has-text-weight-semibold">Not A Crocodile or a Rhinoceros
-                                    <p class="is-size-7">Published February 28, 2025</p></span>
-                                <div class="crossword-tags">
-                                    <span class="tag is-warning is-hoverable">Midi</span>   
-                                    <span class="tag is-white is-hoverable">12x9</span>   
-                                    <span class="tag is-hoverable is-link">Themed</span>   
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cell" id="fave">
-                        <a href="https://crosshare.org/crosswords/Pbni3aVUSIr964GDNO99/say-the-magic-word">
-                            <div class="notification has-background-primary-soft">
-                                <span class="subtitle has-text-weight-semibold">Say the Magic Word!
-                                    <p class="is-size-7">Published February 12, 2025</p></span>
-                                <div class="crossword-tags">
-                                    <span class="tag is-success is-hoverable">Full</span>   
-                                    <span class="tag is-white is-hoverable">11x15</span>   
-                                    <span class="tag is-hoverable is-link">Themed</span>   
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cell">
-                        <a href="https://crosshare.org/crosswords/IiiLdUVDvAGu2ixejEKj/the-hole-story">
-                            <div class="notification has-background-primary-soft">
-                                <span class="subtitle has-text-weight-semibold">The Whole Story
-                                    <p class="is-size-7">Published February 7, 2025</p></span>
-                                <div class="crossword-tags">
-                                    <span class="tag is-warning is-hoverable">Midi</span>   
-                                    <span class="tag is-white is-hoverable">11x11</span>   
-                                    <span class="tag is-hoverable is-link">Themed</span>   
-                                    <span class="tag is-hoverable is-info">Grid Art</span>  
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cell">
-                        <a href="https://crosshare.org/crosswords/W4eJoZfH0pq6908LfnLz/whipped-into-shape">
-                            <div class="notification has-background-primary-soft">
-                                <span class="subtitle has-text-weight-semibold">Whipped Into Shape
-                                    <p class="is-size-7">Published February 4, 2025</p></span>
-                                <div class="crossword-tags">
-                                    <span class="tag is-warning is-hoverable">Midi</span>   
-                                    <span class="tag is-white is-hoverable">9x9</span>   
-                                    <span class="tag is-hoverable is-link">Themed</span>   
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cell">
-                        <a href="https://crosshare.org/crosswords/DlBTlKs915JmO3frg1dS/high-excitement">
-                            <div class="notification has-background-primary-soft">
-                                <span class="subtitle has-text-weight-semibold">High Excitement
-                                    <p class="is-size-7">Published January 25, 2025</p></span>
-                                <div class="crossword-tags">
-                                    <span class="tag is-warning is-hoverable">Midi</span>   
-                                    <span class="tag is-white is-hoverable">11x11</span>   
-                                    <span class="tag is-hoverable is-black">Themeless</span>   
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cell">
-                        <a href="https://crosshare.org/crosswords/yspZYGGyr5GfhDnJc7v0/opposite-day">
-                            <div class="notification has-background-primary-soft">
-                                <span class="subtitle has-text-weight-semibold">Opposite Day
-                                    <p class="is-size-7">Published January 17, 2025</p></span>
-                                <div class="crossword-tags">
-                                    <span class="tag is-danger is-hoverable">Mini</span>   
-                                    <span class="tag is-white is-hoverable">5x5</span>   
-                                    <span class="tag is-hoverable is-link">Themed</span>   
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </section><hr>
+		<!-- List of all the places I am/can be contacted-->
+		<section id="socials">
+			<h1 class="title is-2">Contact</h1>
+			<p>
+				This is all of the places where I can be contacted or found.
+				On some of these websites, I go by the username <span class="has-text-success">"GamingLizard9"</span>, 
+				which I randomly picked when I was twelve and haven't been able to change since.
+			</p><br>
 
-            <!-- List of all the places I am/can be contacted-->
-            <section id="socials">
-                <h1 class="title is-2">Contact</h1>
-                <p>
-                    This is all of the places where I can be contacted or found.
-                    On some of these websites, I go by the username <span class="has-text-success">"GamingLizard9"</span>, 
-                    which I randomly picked when I was twelve and haven't been able to change since.
-                </p><br>
+			<span>
+				<div class="buttons">
+					<a id="discord-button" class="button has-text-white" href="https://discord.com/users/gaminglizard9">Discord</a>
+					<a id="github-button" class="button has-text-white" href="https://github.com/gaminglizard9">Github</a>
+					<a id="instagram-button" class="button has-text-white" href="https://instagram.com/dawsoncall8">Instagram</a>
+					<a id="reddit-button" class="button has-text-white" href="https://old.reddit.com/user/gaminglizard99/">Reddit</a>
+					<a id="spotify-button" class="button has-text-black" href="https://open.spotify.com/user/jolz5klwrbmnd8i5bf7x1u12k?si=9a0f63d9c6c14aeb">Spotify</a>
+					<a id="stats-fm-button" class="button has-text-success" href="https://stats.fm/gaminglizard9">stats.fm</a>
+					<a id="steam-button" class="button has-text-white" href="https://steamcommunity.com/profiles/GamingLizard9">Steam</a>
+					<a id="youtube-button" class="button has-text-white" href="https://youtube.com/@gaminglizard9">Youtube</a>
+				</div>
+			</span>
 
-                <span>
-                    <div class="buttons">
-                        <a id="discord-button" class="button has-text-white" href="https://discord.com/users/gaminglizard9">Discord</a>
-                        <a id="github-button" class="button has-text-white" href="https://github.com/gaminglizard9">Github</a>
-                        <a id="instagram-button" class="button has-text-white" href="https://instagram.com/dawsoncall8">Instagram</a>
-                        <a id="reddit-button" class="button has-text-white" href="https://old.reddit.com/user/gaminglizard99/">Reddit</a>
-                        <a id="spotify-button" class="button has-text-black" href="https://open.spotify.com/user/jolz5klwrbmnd8i5bf7x1u12k?si=9a0f63d9c6c14aeb">Spotify</a>
-                        <a id="stats-fm-button" class="button has-text-success" href="https://stats.fm/gaminglizard9">stats.fm</a>
-                        <a id="steam-button" class="button has-text-white" href="https://steamcommunity.com/profiles/GamingLizard9">Steam</a>
-                        <a id="youtube-button" class="button has-text-white" href="https://youtube.com/@gaminglizard9">Youtube</a>
-                    </div>
-                </span>
+			<br><p>
+				Additionally, if you need to directly contact me,
+				you can send me an email me <a href="mailto:dawson@dawsoncall.com">here</a>.
+			</p>
+			
+		</section>
+	</div><br>
 
-                <br><p>
-                    Additionally, if you need to directly contact me,
-                    you can send me an email me <a href="mailto:dawson@dawsoncall.com">here</a>.
-                </p>
-                
-            </section>
-        </div><br>
-
-        <footer id="footer" class="footer has-background-primary-soft">
-            <div class="content has-text-centered">
-                <p class="has-text-text-bold">
-                    Website created by <a href="https://dawsoncall.com">Dawson Call</a>.
-                    The source code is available on <a href="https://github.com/GamingLizard9/GamingLizard9.github.io">GitHub</a>.
-                </p>
-                <p class="has-text-text-bold">This webpage was last updated August 29th, 2025.</p>
-            </div>
-          </footer>
-    </body>
-</html>
+</MainLayout>
