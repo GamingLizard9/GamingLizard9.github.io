@@ -6,7 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "build-bulma": "sass --load-path=node_modules src/styles/global.scss src/styles/global.css",
+    "bulma-start": "npm run build-bulma -- --watch"
   },
   "dependencies": {
     "astro": "^5.15.3",
