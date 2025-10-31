@@ -1,24 +1,16 @@
 {
   "name": "gaminglizard9.github.io",
-  "version": "0.9.0",
-  "description": "my website yay",
-  "main": "index.js",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "build-bulma": "sass --load-path=node_modules sass/mystyles.scss css/mystyles.css",
-    "start": "npm run build-bulma -- --watch"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GamingLizard9/GamingLizard9.github.io.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/GamingLizard9/GamingLizard9.github.io/issues"
-  },
-  "homepage": "https://github.com/GamingLizard9/GamingLizard9.github.io#readme",
   "dependencies": {
-    "bulma": "^1.0.3",
-    "sass": "^1.86.0"
+    "astro": "^5.15.3",
+    "bulma": "^1.0.4",
+    "sass": "^1.93.2"
   }
 }

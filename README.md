@@ -1,9 +1,46 @@
-This is my personal website!
+# Astro Starter Kit: Basics
 
-It contains various pieces of information about me, some things I've done, and how you
-can contact me.
+```sh
+npm create astro@latest -- --template basics
+```
 
-I gave the site a complete redesign in April of 2025; if you still want to see the old
-versions, they are on the [Internet Archive](https://web.archive.org/web/20241201000000*/gaminglizard9.github.io) at [one of these two links](https://web.archive.org/web/20250000000000*/dawsoncall.com); I've tried to make an archive whenever I change something.
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-I made this page using the [Bulma](https://bulma.io) CSS framework.
+## 🚀 Project Structure
+
+Inside of your Astro project, you'll see the following folders and files:
+
+```text
+/
+├── public/
+│   └── favicon.svg
+├── src
+│   ├── assets
+│   │   └── astro.svg
+│   ├── components
+│   │   └── Welcome.astro
+│   ├── layouts
+│   │   └── Layout.astro
+│   └── pages
+│       └── index.astro
+└── package.json
+```
+
+To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
