@@ -1,7 +1,17 @@
 ---
-const TagColors={ 
-     "Midi": "is-warning",
-     "Mini": "is error",
-     "Full": "is-success"
-};
+
+const Tags = new Map([
+  ["Midi", "is-warning"],
+  ["Mini", "is-danger"],
+  ["Full", "is-success"],
+  ["Themed" ,"is-link"],
+  ["Themeless", "is-black"],
+  ["Grid Art", "is-info"]
+]);
+
+const { text } = Astro.props;
+
+const classValue = Tags.has(text) ? "tag " + Tags.get(text) : "tag is-white";
 ---
+
+<span class={classValue}>{text}</span>  
