@@ -19,6 +19,9 @@ import CrosswordTag from "../components/crosswords/CrosswordTag.astro";
 import WebsiteSection from '../components/websites/WebsiteSection.astro';
 import WebsiteEntry from '../components/websites/WebsiteEntry.astro';
 
+import SocialsSection from '../components/socials/SocialsSection.astro';
+import SocialButton from "../components/socials/SocialButton.astro";
+
 const pageTitle = "Dawson Call's Website!";
 ---
 <MainLayout pageTitle={pageTitle}>
@@ -98,34 +101,16 @@ const pageTitle = "Dawson Call's Website!";
 			</Crossword>
 		</CrosswordsSection><hr>
 
-		<!-- List of all the places I am/can be contacted-->
-		<section id="socials">
-			<h1 class="title is-2">Contact</h1>
-			<p>
-				This is all of the places where I can be contacted or found.
-				On some of these websites, I go by the username <span class="has-text-success">"GamingLizard9"</span>, 
-				which I randomly picked when I was twelve and haven't been able to change since.
-			</p><br>
-
-			<span>
-				<div class="buttons">
-					<a id="discord-button" class="button has-text-white" href="https://discord.com/users/gaminglizard9">Discord</a>
-					<a id="github-button" class="button has-text-white" href="https://github.com/gaminglizard9">Github</a>
-					<a id="instagram-button" class="button has-text-white" href="https://instagram.com/dawsoncall8">Instagram</a>
-					<a id="reddit-button" class="button has-text-white" href="https://old.reddit.com/user/gaminglizard99/">Reddit</a>
-					<a id="spotify-button" class="button has-text-black" href="https://open.spotify.com/user/jolz5klwrbmnd8i5bf7x1u12k?si=9a0f63d9c6c14aeb">Spotify</a>
-					<a id="stats-fm-button" class="button has-text-success" href="https://stats.fm/gaminglizard9">stats.fm</a>
-					<a id="steam-button" class="button has-text-white" href="https://steamcommunity.com/profiles/GamingLizard9">Steam</a>
-					<a id="youtube-button" class="button has-text-white" href="https://youtube.com/@gaminglizard9">Youtube</a>
-				</div>
-			</span>
-
-			<br><p>
-				Additionally, if you need to directly contact me,
-				you can send me an email me <a href="mailto:dawson@dawsoncall.com">here</a>.
-			</p>
-			
-		</section>
+		<SocialsSection>
+			<SocialButton service="Discord" url_start="discord.com/users/" username="GamingLizard9" />
+			<SocialButton service="Github" username="GamingLizard9" />
+			<SocialButton service="Instagram" username="dawsoncall8" />
+			<SocialButton service="Reddit" url_start="old.reddit.com/user/" username="gaminglizard99" />
+			<SocialButton service="Spotify" url_start="open.spotify.com/user/" username="jolz5klwrbmnd8i5bf7x1u12k?si=9a0f63d9c6c14aeb" />
+			<SocialButton service="stats.fm" url_start="stats.fm/" username="gaminglizard9" />
+			<SocialButton service="Steam" url_start="steamcommunity.com/profiles/" username="GamingLizard9" />
+			<SocialButton service="Youtube" url_start="youtube.com/@" username="GamingLizard9" />
+		</SocialsSection>		
 	</div><br>
 
 </MainLayout>
