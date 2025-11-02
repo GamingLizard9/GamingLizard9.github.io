@@ -1,46 +1,9 @@
-# Astro Starter Kit: Basics
+# My Website
 
-```sh
-npm create astro@latest -- --template basics
-```
+This is my personal website! 
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+It contains various pieces of information about me, some things I've done, and how you can contact me.
 
-## 🚀 Project Structure
+I made it using the [Astro](https://astro.build) javascript framework (which is converted to static HTML to be hosted by GitHub pages) and the [Bulma](https://bulma.io/) CSS library.
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+If you want to view old versions of this site, you can find them at [both](https://web.archive.org/web/20241201000000*/gaminglizard9.github.io) of [these](https://web.archive.org/web/20250000000000*/dawsoncall.com) Internet Archive links.
