@@ -1,0 +1,28 @@
+$pink-red: #ff2bb8;
+
+/* Import the basic bulma with customized color */
+@use "bulma/sass/utilities" with (
+  $primary: $pink-red
+);
+
+/* Then import only the needed modules */
+@forward "bulma/sass/base";
+
+@forward "bulma/sass/grid/columns";
+@forward "bulma/sass/grid/grid";
+
+@forward "bulma/sass/helpers/color";
+@forward "bulma/sass/helpers/typography";
+
+@forward "bulma/sass/layout/container";
+@forward "bulma/sass/layout/footer";
+@forward "bulma/sass/layout/hero";
+@forward "bulma/sass/layout/level";
+
+@forward "bulma/sass/elements/button";
+@forward "bulma/sass/elements/content";
+@forward "bulma/sass/elements/notification";
+@forward "bulma/sass/elements/tag";
+@forward "bulma/sass/elements/title";
+
+@forward "bulma/sass/themes";

@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets';
+
+const { title, image, url } = Astro.props;
+---
+
+<div class="cell">
+    <a href={url}>
+        <div class="notification has-background-primary-soft">
+            <p class="subtitle has-text-weight-semibold"><strong>{title}</strong></p>
+            <Image class="website-image" src={image} alt={`The home page of the ${title} website.`}/>
+            <slot />
+        </div>
+    </a>
+</div>
+
+<style>    
+    .website-image {
+        border-radius: 0.375rem;
+    }
+</style>

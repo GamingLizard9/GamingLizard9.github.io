@@ -1,0 +1,35 @@
+---
+import CrosswordTag from "./CrosswordTag.astro";
+
+const {title, date, url, width, height} = Astro.props;
+
+// Automatically determine the size tag based on passed in width and height values
+const size = parseInt(width) * parseInt(height);
+const type = size < 50
+    ? "Mini"
+    : size < 150
+        ? "Midi"
+        : "Full";
+---
+
+<!-- USAGE: Pass in the title, date, and URL as properties, as well as the width and height of the puzzle. 
+ Nest any tags that aren't size tags.-->
+<div class="cell">
+    <a href={url}>
+        <div class="notification has-background-primary-soft">
+            <span class="subtitle has-text-weight-semibold">{title}</span>
+            <p class="is-size-7">Published {date}</p></span>
+            <div class="crossword-tags">
+                <CrosswordTag text={type} />
+                <CrosswordTag text={width + "x" + height} />
+                <slot />    
+            </div>
+        </div>
+    </a>
+</div>
+
+<style>
+    .crossword-tags {
+        padding-top: 10px;
+    }
+</style>

@@ -1,0 +1,116 @@
+---
+import "../styles/global.css";
+
+import { Image } from 'astro:assets';
+
+import smallStepsBigDreams from '../assets/websites/smallsteps-bigdreams.webp';
+import sfsBand from '../assets/websites/sfsband.webp';
+import dakboards from '../assets/websites/dakboards.webp';
+
+import MainLayout from '../layouts/MainLayout.astro';
+
+import HeaderHero from '../components/HeaderHero.astro';
+import NavBar from '../components/NavBar.astro';
+
+import CrosswordsSection from "../components/crosswords/CrosswordsSection.astro";
+import Crossword from "../components/crosswords/Crossword.astro";
+import CrosswordTag from "../components/crosswords/CrosswordTag.astro";
+
+import WebsiteSection from '../components/websites/WebsiteSection.astro';
+import WebsiteEntry from '../components/websites/WebsiteEntry.astro';
+
+import SocialsSection from '../components/socials/SocialsSection.astro';
+import SocialButton from "../components/socials/SocialButton.astro";
+
+const pageTitle = "Dawson Call's Website!";
+---
+<MainLayout pageTitle={pageTitle}>
+	<HeaderHero />
+
+	<NavBar /><br>
+
+	<div class="container is-fluid">
+
+		<!-- This section contains the various websites I've designed -->
+		 <WebsiteSection >
+			<WebsiteEntry title="Dawson's Dakboards" image={dakboards} url="https://web.archive.org/web/20240528004311/https://gaminglizard9.github.io/dakboards/">
+				<p>
+					I made this website for a personal project that never ended up panning out,
+					but it is my personal favorite website I have made.
+					Note that it is hosted on the Internet Archive,
+					so it loads slowly and is missing a few resources.
+				</p>
+			</WebsiteEntry>
+
+			<WebsiteEntry title="St. Francis Band" image={sfsBand} url="https://sfsband.org">
+				<p>
+					This website provides information about my high school's band program, 
+					and gives potential members an embedded interest form they can fill out.
+				</p>
+			</WebsiteEntry>
+
+			<WebsiteEntry title="Small Steps Big Dreams Preschool" image={smallStepsBigDreams} url="https://smallsteps-bigdreams.com">
+				<p>
+					I created this website in 2023 for my aunt's preschool.</p>
+					<p>Note that the website uses a self-signed certificate, 
+					so you might have to click past a warning to view it.
+				</p>
+			</WebsiteEntry>                 
+		 </WebsiteSection><hr>
+
+		<CrosswordsSection>
+			<Crossword title="An Out Of This World Sight" date="May 3, 2025"  url="https://crosshare.org/crosswords/7I3IKn6aQDUMbBKzVPFb/an-out-of-this-world-sight" width="5" height="25">
+				<CrosswordTag text="Themed" />
+			</Crossword>
+
+			<Crossword title="It's Hue-tiful!" date="April 30, 2025"  url="https://crosshare.org/crosswords/WDLa2F1rQFgqC3aP1OY7/its-hue-tiful" width="10" height="12">
+				<CrosswordTag text="Themed" />
+			</Crossword>
+
+			<Crossword title="How Ironic" date="April 2, 2025" url="https://crosshare.org/crosswords/v3fn6mkaMJFhhbll2NmG/how-ironic" width="5" height="5">
+				<CrosswordTag text="Themeless" />
+			</Crossword>
+
+			<Crossword title="There's So Mushroom In Here!" date="March 28, 2025" url="https://crosshare.org/crosswords/qiIJ0PFCO8xxp1MhZHui/theres-so-mushroom-in-here" width="15" height="15">
+				<CrosswordTag text="Themed" />
+			</Crossword>
+
+			<Crossword title="Not A Crocodile or a Rhinoceros" date="February 28, 2025" url="https://crosshare.org/crosswords/Zg0croaxwIkIrzvXBMLl/not-a-crocodile-or-a-rhinoceros" width="12" height="9">
+				<CrosswordTag text="Themed" />
+			</Crossword>
+
+			<Crossword title="Say the Magic Word!" date="Published February 12, 2025" url="https://crosshare.org/crosswords/Pbni3aVUSIr964GDNO99/say-the-magic-word" width="11" height="15">
+				<CrosswordTag text="Themed" />
+			</Crossword>
+
+			<Crossword title="The Whole Story" date="February 7, 2025" url="https://crosshare.org/crosswords/IiiLdUVDvAGu2ixejEKj/the-hole-story" width="11" height="11">
+				<CrosswordTag text="Themed" />
+				<CrosswordTag text="Grid Art" />
+			</Crossword>
+
+			<Crossword title="Whipped Into Shape" date="February 4, 2025" url="https://crosshare.org/crosswords/W4eJoZfH0pq6908LfnLz/whipped-into-shape" width="9" height="9">
+				<CrosswordTag text="Themed" />
+			</Crossword>
+
+			<Crossword title="High Excitement" date="January 25, 2025" url="https://crosshare.org/crosswords/DlBTlKs915JmO3frg1dS/high-excitement" width="11" height="11">
+				<CrosswordTag text="Themeless" />
+			</Crossword>
+
+			<Crossword title="Opposite Day" date="January 17, 2025" url="https://crosshare.org/crosswords/yspZYGGyr5GfhDnJc7v0/opposite-day" width="5" height="5">
+				<CrosswordTag text="Themed" />
+			</Crossword>
+		</CrosswordsSection><hr>
+
+		<SocialsSection>
+			<SocialButton service="Discord" url_start="discord.com/users/" username="GamingLizard9" />
+			<SocialButton service="Github" username="GamingLizard9" />
+			<SocialButton service="Instagram" username="dawsoncall8" />
+			<SocialButton service="Reddit" url_start="old.reddit.com/user/" username="gaminglizard99" />
+			<SocialButton service="Spotify" url_start="open.spotify.com/user/" username="jolz5klwrbmnd8i5bf7x1u12k?si=9a0f63d9c6c14aeb" />
+			<SocialButton service="stats.fm" url_start="stats.fm/" username="gaminglizard9" />
+			<SocialButton service="Steam" url_start="steamcommunity.com/profiles/" username="GamingLizard9" />
+			<SocialButton service="Youtube" url_start="youtube.com/@" username="GamingLizard9" />
+		</SocialsSection>		
+	</div><br>
+
+</MainLayout>

@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import pictureOfMe from "../assets/picture-of-me.webp";
+---
+<div class="hero is-small  has-background-primary-soft">
+    <div class="hero-header">
+        <div class="hero-body">
+            <div class="columns">
+                <div class="column">
+                    <div class="content has-text-text-bold">
+                        <span class="title is-size-1">Hi! I'm <span class="has-text-primary-bold">Dawson Call</span>
+                        
+                        <p class="is-size-6">he/him</p></span>
+                        <p></p> <!-- Line break that is smaller than a <br> -->
+                        <p class="is-size-5">I am currently a freshman at Michigan State University, studying computer science.</p>
+                        <p class="is-size-5">In my free time, I enjoy programming, playing video games, and playing music.</p>
+                        <p class="is-size-5">This website has some things I have made in the past, as well as a lot of ways to contact me.</p>
+                    </div>
+                </div>
+                <div class="column is-one-quarter">
+                    <Image class="circle" src={pictureOfMe} alt="A picture of me."/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .hero-body, .hero {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    .circle {
+        border-radius: 9999px;
+    }
+</style>
