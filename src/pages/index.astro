@@ -6,6 +6,7 @@ import { Image } from 'astro:assets';
 import smallStepsBigDreams from '../assets/websites/smallsteps-bigdreams.webp';
 import sfsBand from '../assets/websites/sfsband.webp';
 import dakboards from '../assets/websites/dakboards.webp';
+import inspirationalCreations from '../assets/websites/inspirational-creations.webp';
 
 import MainLayout from '../layouts/MainLayout.astro';
 
@@ -33,12 +34,13 @@ const pageTitle = "Dawson Call's Website!";
 
 		<!-- This section contains the various websites I've designed -->
 		 <WebsiteSection >
-			<WebsiteEntry title="Dawson's Dakboards" image={dakboards} url="https://web.archive.org/web/20240528004311/https://gaminglizard9.github.io/dakboards/">
+			<WebsiteEntry title="Inspirational Creations" image={inspirational-creations} url="https://inspirational-creations.net">
 				<p>
-					I made this website for a personal project that never ended up panning out,
-					but it is my personal favorite website I have made.
-					Note that it is hosted on the Internet Archive,
-					so it loads slowly and is missing a few resources.
+					This is a website I made for my Mom and aunt's custom goods store in 2025.
+					It uses Markdown files to define most content (products, content pages, etc.),
+					and uses Astro to compile it to static HTML.
+					This allows content to easily be added/edited, 
+					while keeping the backend fast by having no JavaScript rendering!
 				</p>
 			</WebsiteEntry>
 
@@ -46,16 +48,27 @@ const pageTitle = "Dawson Call's Website!";
 				<p>
 					This website provides information about my high school's band program, 
 					and gives potential members an embedded interest form they can fill out.
+					I first made it in 2023.
 				</p>
 			</WebsiteEntry>
 
 			<WebsiteEntry title="Small Steps Big Dreams Preschool" image={smallStepsBigDreams} url="https://smallsteps-bigdreams.com">
 				<p>
-					I created this website in 2023 for my aunt's preschool.</p>
+					I also created this website in 2023 for my aunt's preschool.</p>
 					<p>Note that the website uses a self-signed certificate, 
 					so you might have to click past a warning to view it.
 				</p>
-			</WebsiteEntry>                 
+			</WebsiteEntry>   
+
+			<WebsiteEntry title="Dawson's Dakboards" image={dakboards} url="https://web.archive.org/web/20240528004311/https://gaminglizard9.github.io/dakboards/">
+				<p>
+					I made this website for a personal project that never ended up panning out,
+					but I am proud of some of the effects on the page,
+					so I am leaving it here for prosterity.
+					Note that it is hosted on the Internet Archive,
+					so it loads slowly and is missing a few resources.
+				</p>
+			</WebsiteEntry>              
 		 </WebsiteSection><hr>
 
 		<CrosswordsSection>
