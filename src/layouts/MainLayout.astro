@@ -5,14 +5,16 @@ import Footer from '../components/Footer.astro';
 ---
 
 <!DOCTYPE html>
-<html data-theme="dark">
+<html data-theme="dark" lang="en">
     <head>
         <title>{pageTitle}</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-		<slot />
+		<main role="main">
+			<slot />
+		</main>
         <Footer />
     </body>
 </html>
