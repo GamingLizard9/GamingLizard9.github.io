@@ -7,8 +7,9 @@ const ButtonID = service.toLowerCase().replace(".", "-") + "-button";
 
 const URL =(url_start == null) ? "https://" + service + ".com/" + username : "https://" + url_start + username;
 ---
-
-<a id={ButtonID} class="button" href={URL}>{service}</a>
+<strong>
+    <a id={ButtonID} class="button" href={URL}>{service}</a>
+</strong>
 
 
 
