@@ -12,10 +12,11 @@ import Footer from '../components/Footer.astro';
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-		<main role="main">
-			<div class="container is-fullhd">
-			<slot />
-		</main>
-        <Footer />
+		<div class="container is-fullhd">
+			<main role="main">
+				<slot />
+			</main>
+        	<Footer />
+		</div>
     </body>
 </html>
