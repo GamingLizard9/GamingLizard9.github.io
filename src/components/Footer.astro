@@ -1,10 +1,21 @@
+---
+const date = new Date()
+date.setHours(date.getHours() - 5) // The server runs this code in UTC, but it needs to be the time in EST
+
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+const year = date.getFullYear();
+const month = months[date.getMonth()];
+const day = date.getDate();
+---
+
 <footer id="footer" class="footer has-background-primary-soft">
     <div class="content has-text-centered">
         <p class="has-text-text-bold">
             Website created by <a href="https://dawsoncall.com">Dawson Call</a>.
             The source code is available on <a href="https://github.com/GamingLizard9/GamingLizard9.github.io">GitHub</a>.
         </p>
-        <p class="has-text-text-bold">This webpage was last updated January 20, 2026.</p>
+        <p class="has-text-text-bold">This webpage was last updated {month} {day}, {year}.</p>
     </div>
 </footer>
 
