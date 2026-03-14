@@ -1,0 +1,26 @@
+---
+import "../styles/global.scss"
+
+import MainLayout from "../layouts/MainLayout.astro"
+import BlogHeader from "../components/blog/BlogHeader.astro"
+import BlogPostPreview from "../components/blog/BlogPostPreview.astro"
+
+// Get all posts
+const allPosts = Object.values(import.meta.glob('/src/pages/posts/*.md', { eager: true }));
+
+console.log(allPosts)
+
+//
+
+---
+
+<MainLayout pageTitle="Blog">
+    <BlogHeader />
+
+    {allPosts.map(post => 
+        <BlogPostPreview frontmatter = {post.frontmatter}></BlogPostPreview>
+    )}
+
+    <hr>
+    <p> Those were all the titles!</p>
+</MainLayout>
