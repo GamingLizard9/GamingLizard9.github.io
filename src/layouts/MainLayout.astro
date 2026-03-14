@@ -1,5 +1,6 @@
 ---
 const { pageTitle } = Astro.props;
+import '../styles/global.scss';
 
 import Footer from '../components/Footer.astro';
 ---
@@ -13,10 +14,16 @@ import Footer from '../components/Footer.astro';
     </head>
     <body>
 		<div class="container is-fullhd">
-			<main role="main">
+			<main role="main" class="main">
 				<slot />
 			</main>
         	<Footer />
 		</div>
     </body>
 </html>
+
+<style>
+    .main {
+		flex: 1 0 auto;
+	}
+</style>
