@@ -2,7 +2,7 @@
 
 This is my personal website! 
 
-It contains various pieces of information about me, some things I've done, and how you can contact me.
+It contains various pieces of information about me, some things I've done, and how you can contact me. I also recently added a [blog](https://dawsoncall.com/blog)!
 
 I made it using the [Astro](https://astro.build) javascript framework (which is converted to static HTML to be hosted by GitHub pages) and the [Bulma](https://bulma.io/) CSS library.
 
