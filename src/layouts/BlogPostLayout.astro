@@ -1,0 +1,13 @@
+---
+const { frontmatter } = Astro.props;
+import MainLayout from "../layouts/MainLayout.astro";
+
+import BlogHeader from "../components/blog/BlogHeader.astro";
+import BlogPost from "../components/blog/BlogPost.astro";
+---
+<MainLayout>
+    <BlogHeader linkText="All posts"/>
+    <BlogPost frontmatter={frontmatter}>
+        <slot />
+    </BlogPost>
+</MainLayout>

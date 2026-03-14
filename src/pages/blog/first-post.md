@@ -1,14 +1,11 @@
 ---
-layout: "./layouts/BlogPost.astro"
+layout: "../../layouts/BlogPostLayout.astro"
 
-title: "My first post"
-link: "https://wavelengths.online/posts/pokemon-pokopia-came-out-too-soon-complimentary"
+title: "Welcome to my blog!"
+date: "2026-03-14"
 ---
-Hello there!
+Hello there, and welcome to my new blog!
 
-Welcome to my thing!
+I am going to write down my thoughts from time to time, and share interesting or fun things I find.
 
-## Header test
-
-I am trying to see if:
-* **Formatting** works at all, like *italics*
+This is still in a very early state; there are some features (images, tags, RSS, etc.) that I want to add but haven't yet. Hopefully I will have those on here soon. 

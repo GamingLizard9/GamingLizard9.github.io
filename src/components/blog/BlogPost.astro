@@ -1,0 +1,57 @@
+---
+const { frontmatter, url } = Astro.props;
+
+// Getting title of link for preview
+let linkTitle = frontmatter.link;
+if(frontmatter.link) {
+    try {
+        const response = await fetch(frontmatter.link);
+        const html = await response.text();
+        const match = html.match(/<title[^>]*>([^<]+)<\/title>/i);
+        linkTitle = match ? match[1].trim() : frontmatter.link;
+    } catch (error) {
+        console.error(`Could not get link title for ${frontmatter.link}, falling back to URL`)
+    }
+}
+
+// Correct for time zone shenanigans
+let correctedDate = new Date(frontmatter.date);
+correctedDate.setDate(correctedDate.getDate() + 1)
+---
+<div class="container is-fluid">
+    <div class="container is-max-tablet">
+        <div class="content">
+
+            <a class="title" href={url}>{frontmatter.title}</a>
+
+            {frontmatter.date && (
+                <p class="has-text-grey is-size-6">
+                    <time datetime={correctedDate.toISOString()}>
+                        {correctedDate.toLocaleDateString('en-us', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric',
+                        })}
+                    </time>
+                </p>
+            )}
+
+            {frontmatter.link && <a href={frontmatter.link}>
+                <span class="tag is-medium has-background-primary-soft has-text-white">
+                    🔗 | {linkTitle}
+                </span>
+            </a>}
+
+            <slot />
+
+            <hr>
+        </div>
+    
+    </div>
+</div>
+
+<style>
+    .tag {
+        margin: 0px 0px 10px 0px;
+    }
+</style>

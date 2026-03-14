@@ -1,10 +1,12 @@
 ---
+const { linkText } = Astro.props;
 ---
+
 <div class="hero is-small  has-background-primary-soft" id="blog-header">
     <div class="hero-header">
         <div class="hero-body">
             <div class="content has-text-text-bold">
-                <a class="is-link is-size-5" href=".\">Return Home</a></br>
+                <a class="is-link is-size-5 has-text-white" href=".\"><u>{linkText}</u></a></br>
                 <span class="title is-size-1">Dawson Call's <span class="has-text-primary-bold">Blog</span></span>
                 
                 <p></p> <!-- Line break that is smaller than a <br> -->
@@ -12,6 +14,10 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="container is-max-tablet">
+    <hr>
 </div>
 
 <style>

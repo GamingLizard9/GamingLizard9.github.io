@@ -1,26 +1,19 @@
 ---
-import "../styles/global.scss"
-
 import MainLayout from "../layouts/MainLayout.astro"
 import BlogHeader from "../components/blog/BlogHeader.astro"
-import BlogPostPreview from "../components/blog/BlogPostPreview.astro"
+import BlogPost from "../components/blog/BlogPost.astro"
 
 // Get all posts
-const allPosts = Object.values(import.meta.glob('/src/pages/posts/*.md', { eager: true }));
-
-console.log(allPosts)
-
-//
+let allPosts = Object.values(import.meta.glob('/src/pages/blog/*.md', { eager: true }));
+// Sort posts by date in descending order
+allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
 
 ---
 
 <MainLayout pageTitle="Blog">
-    <BlogHeader />
+    <BlogHeader linkText = "Return home" />
 
-    {allPosts.map(post => 
-        <BlogPostPreview frontmatter = {post.frontmatter}></BlogPostPreview>
-    )}
-
-    <hr>
-    <p> Those were all the titles!</p>
+    {allPosts.map(post => (
+        <BlogPost frontmatter={post.frontmatter} url={post.url}><Fragment set:html={post.compiledContent()} /></BlogPost>
+    ))}
 </MainLayout>
