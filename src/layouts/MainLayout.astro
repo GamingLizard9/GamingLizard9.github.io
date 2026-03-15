@@ -2,6 +2,7 @@
 const { pageTitle } = Astro.props;
 import '../styles/global.scss';
 
+
 import Footer from '../components/Footer.astro';
 ---
 
@@ -11,6 +12,11 @@ import Footer from '../components/Footer.astro';
         <title>{pageTitle}</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Font Import
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@100..900&display=swap');
+        </style> -->
     </head>
     <body>
 		<div class="container is-fullhd">

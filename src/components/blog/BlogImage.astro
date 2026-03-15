@@ -1,0 +1,98 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+const { frontmatter } = Astro.props;
+
+const showImage = frontmatter.image && frontmatter.image.src;
+
+let imgSrc, src, alt, cap;
+
+if (showImage) {
+    const allImgs = import.meta.glob<{ default: ImageMetadata }>('../../assets/blog/*.*', { eager: true });
+    imgSrc = "../../assets/blog/" + frontmatter.image.src;
+
+    if (!allImgs[imgSrc]) {
+        console.error(`Image not found: ${imgSrc}`);
+        imgSrc = "../../assets/blog/default.png";
+    }
+
+    const imageMetadata = allImgs[imgSrc];
+
+    src = imageMetadata.default;
+    alt = frontmatter.image.alt;
+    cap = frontmatter.image.cap ? frontmatter.image.cap : "No caption was found";
+}
+---
+
+{showImage &&
+    <>
+        <!-- HTML code for the image rendering on the page -->
+        <button class="js-modal-trigger" data-target={`modal-${imgSrc}`}>
+            <Image class="modal-image" src={src} alt={alt} />
+        </button>
+        <p class="is-size-7 has-text-centered">{cap}</p>
+    
+        <!-- HTML code for the modal -->
+        <div class="modal" id={`modal-${imgSrc}`}>
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <Image class="modal-image" src={src} alt={alt || "Alt text for image not provided"} inferSize={true}/> 
+            </div>
+            <button class="modal-close is-large" aria-label="close"></button>
+        </div>
+    </>
+}
+
+<!-- Style rules for images -->
+<style>
+    .modal-image {
+        border-radius: 10px;
+    }
+</style>
+
+<!-- Pre-made Javascript provided by Bulma for this -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Functions to open and close a modal
+        function openModal($el) {
+            $el.classList.add('is-active');
+        }
+
+        function closeModal($el) {
+            $el.classList.remove('is-active');
+        }
+
+        function closeAllModals() {
+            (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+            closeModal($modal);
+            });
+        }
+
+        // Add a click event on buttons to open a specific modal
+        (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+            const modal = $trigger.dataset.target;
+            const $target = document.getElementById(modal);
+
+            $trigger.addEventListener('click', () => {
+            openModal($target);
+            });
+        });
+
+        // Add a click event on various child elements to close the parent modal
+        (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+            const $target = $close.closest('.modal');
+
+            $close.addEventListener('click', () => {
+            closeModal($target);
+            });
+        });
+
+        // Add a keyboard event to close all modals
+        document.addEventListener('keydown', (event) => {
+            if(event.key === "Escape") {
+            closeAllModals();
+            }
+        });
+    });
+</script>

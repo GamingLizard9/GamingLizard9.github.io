@@ -2,7 +2,8 @@ $pink-red: #ff2bb8;
 
 /* Import the basic bulma with customized color */
 @use "bulma/sass/utilities" with (
-  $primary: $pink-red
+  $primary: $pink-red,
+  //$family-primary: '"Noto Serif", serif',
 );
 
 /* Then import only the needed modules */
@@ -24,5 +25,7 @@ $pink-red: #ff2bb8;
 @forward "bulma/sass/elements/notification";
 @forward "bulma/sass/elements/tag";
 @forward "bulma/sass/elements/title";
+
+@forward "bulma/sass/components/modal";
 
 @forward "bulma/sass/themes";

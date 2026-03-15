@@ -1,6 +1,8 @@
 ---
 const { frontmatter, url } = Astro.props;
 
+import BlogImage from './BlogImage.astro';
+
 // Getting title of link for preview
 let linkTitle = frontmatter.link;
 if(frontmatter.link) {
@@ -41,6 +43,9 @@ correctedDate.setDate(correctedDate.getDate() + 0)
                     🔗 | {linkTitle}
                 </span>
             </a>}
+
+            <BlogImage frontmatter={frontmatter} />
+
 
             <slot />
 
