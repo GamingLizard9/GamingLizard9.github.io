@@ -1,0 +1,6 @@
+---
+title: "Go Read This Article About Sports Betting"
+date: "2026-03-18"
+link: "https://www.theatlantic.com/magazine/2026/04/online-sports-betting-app-addiction/686061/?gift=66OeTwjwIWd7-zlTK2lFDi3Q8DuxbBUQfdARMQEcv-Y&utm_source=copy-link&utm_medium=social&utm_campaign=share"
+---
+The author of this article writes about his experience with sports betting. What started as a journalistic endeavor quickly turns into a full-on obsession, and the article does a really good job of depicting that transition. For someone like me, who has never done this (and you shouldn't either!), it serves as a great reminder of why I have no plans to start.
