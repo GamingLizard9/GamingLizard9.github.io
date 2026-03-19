@@ -39,9 +39,9 @@ correctedDate.setDate(correctedDate.getDate() + 0)
             )}
 
             {frontmatter.link && <a href={frontmatter.link}>
-                <span class="tag is-medium has-background-primary-soft has-text-white">
+                <a class="tag is-medium has-background-primary-soft has-text-white">
                     🔗 | {linkTitle}
-                </span>
+                </a>
             </a>}
 
             <BlogImage frontmatter={frontmatter} />
