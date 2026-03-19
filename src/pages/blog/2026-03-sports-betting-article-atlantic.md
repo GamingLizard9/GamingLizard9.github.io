@@ -1,4 +1,6 @@
 ---
+layout: "../../layouts/BlogPostLayout.astro"
+
 title: "Go Read This Article About Sports Betting"
 date: "2026-03-18"
 link: "https://www.theatlantic.com/magazine/2026/04/online-sports-betting-app-addiction/686061/?gift=66OeTwjwIWd7-zlTK2lFDi3Q8DuxbBUQfdARMQEcv-Y&utm_source=copy-link&utm_medium=social&utm_campaign=share"
