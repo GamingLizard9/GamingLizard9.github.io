@@ -11,6 +11,7 @@
     "bulma-start": "npm run build-bulma -- --watch"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
     "astro": "^5.15.3",
     "bulma": "^1.0.4",
     "sass": "^1.93.2",
