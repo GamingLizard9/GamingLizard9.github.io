@@ -1,0 +1,20 @@
+# Dawson Call's Website
+
+> The personal website of Dawson Call. It introduces who he is, showcases websites he has designed and crossword puzzles he has constructed, links to his social media profiles, and hosts his personal blog.
+
+This site is built with the [Astro](https://astro.build) framework (compiled to static HTML and hosted on GitHub Pages) and the [Bulma](https://bulma.io) CSS library. The canonical domain is https://dawsoncall.com.
+
+## Pages
+
+- [Home](https://dawsoncall.com/): Introduction to Dawson, a gallery of websites he has built, the crossword puzzles he has constructed, and links to his social media profiles.
+- [Blog](https://dawsoncall.com/blog): Index of Dawson's blog posts, covering a range of his interests.
+
+## Blog posts
+
+- [Welcome to my blog!](https://dawsoncall.com/blog/first-post): Introduction to the blog and the features it currently supports (March 15, 2026).
+
+## Optional
+
+- [Sitemap](https://dawsoncall.com/sitemap-index.xml): Machine-readable XML index of every page on the site.
+- [Archived versions (gaminglizard9.github.io)](https://web.archive.org/web/20241201000000*/gaminglizard9.github.io): Older snapshots of the site on the Internet Archive.
+- [Archived versions (dawsoncall.com)](https://web.archive.org/web/20250000000000*/dawsoncall.com): More recent snapshots on the Internet Archive.
